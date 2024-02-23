@@ -58,6 +58,8 @@ class DashboardViewController: NSViewController {
         
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(self.themeChangedNotification(notification:)), name: .onInterfaceThemeChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleImageNotification(_:)), name: .webViewImageClicked, object: nil)
+        
+//        loadMockData()
     }
     
     override func viewWillAppear() {
@@ -307,6 +309,30 @@ class DashboardViewController: NSViewController {
         self.listViewController?.contactChatsContainerViewController.forceReload()
         self.listViewController?.tribeChatsContainerViewController.forceReload()
         self.newDetailViewController?.forceReload()
+    }
+    
+    
+    
+    func loadMockData() {
+        let mockContacts = MockData.Contacts
+        let mockChats = MockData.Chats
+//        let mockMessages = MockData.SingleTextMessageWithID(788101, chatId: 888987, senderId: 9991165)
+        
+//        let mockMessages = MockData.SingleAttachmentMessageWithID(788104, chatId: 888987, senderId: 9991165)
+        
+//        let mockMessages = MockData.MultipleAttachmentMessagesStartingWithID(788251, chatId: 888987, senderId: 9991165, count: 500)
+        
+        let mockMessages = MockData.MultipleTextMessagesStartingWithID(788351, chatId: 888987, senderId: 9991165, count: 1000)
+        
+        print("🐞 Adding mock data. \(mockContacts.count) contacts and \(mockChats.count) chats...")
+        chatListViewModel.saveObjects(contacts: mockContacts, chats: mockChats, subscriptions: [], invites: [])
+        
+        print("🐞 Adding \(mockMessages.count) mock messages...")
+        chatListViewModel.addMessages(messages: mockMessages) { (newChatMessagesCount, newMessagesCount) in
+            print("🐞 Processed \(newMessagesCount) messages. Added \(newChatMessagesCount) to database.")
+            
+            CoreDataManager.sharedManager.persistentContainer.viewContext.saveContext()
+        }
     }
     
     func reloadData() {

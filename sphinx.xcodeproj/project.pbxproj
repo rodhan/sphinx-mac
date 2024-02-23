@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0DB56AAF2B6285F000B7098E /* ChatTrackingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB56AAE2B6285F000B7098E /* ChatTrackingHandler.swift */; };
 		1AD578FF09B63C227165D4DA /* Pods_Sphinx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C242433501D81263FED4C2 /* Pods_Sphinx.framework */; };
+		459405A52B85168100727D69 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459405A42B85168100727D69 /* MockData.swift */; };
+		459405A72B851A8700727D69 /* mock_contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405A62B851A8700727D69 /* mock_contacts.json */; };
+		459405A92B851EA500727D69 /* mock_chats.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405A82B851EA500727D69 /* mock_chats.json */; };
+		459405AB2B8619E100727D69 /* mock_messages_100_hey_theres.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405AA2B8619E100727D69 /* mock_messages_100_hey_theres.json */; };
+		459405AD2B86319200727D69 /* mock_message_template.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405AC2B86319200727D69 /* mock_message_template.json */; };
+		459405AF2B8636DC00727D69 /* mock_message_attachment_template.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405AE2B8636DC00727D69 /* mock_message_attachment_template.json */; };
 		4702BCF0248FE5C400EE9394 /* ShareInviteCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4702BCEF248FE5C400EE9394 /* ShareInviteCodeViewController.swift */; };
 		4702BCF2248FE6B700EE9394 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4702BCF1248FE6B700EE9394 /* NSImage.swift */; };
 		470396E9253721D7007F9C23 /* API+PodcastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470396E8253721D7007F9C23 /* API+PodcastExtension.swift */; };
@@ -651,6 +657,12 @@
 /* Begin PBXFileReference section */
 		0DB56AAE2B6285F000B7098E /* ChatTrackingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTrackingHandler.swift; sourceTree = "<group>"; };
 		1728D33343FCD0F3C86E770D /* Pods-Sphinx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sphinx.release.xcconfig"; path = "Target Support Files/Pods-Sphinx/Pods-Sphinx.release.xcconfig"; sourceTree = "<group>"; };
+		459405A42B85168100727D69 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		459405A62B851A8700727D69 /* mock_contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_contacts.json; sourceTree = "<group>"; };
+		459405A82B851EA500727D69 /* mock_chats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_chats.json; sourceTree = "<group>"; };
+		459405AA2B8619E100727D69 /* mock_messages_100_hey_theres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_messages_100_hey_theres.json; sourceTree = "<group>"; };
+		459405AC2B86319200727D69 /* mock_message_template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_message_template.json; sourceTree = "<group>"; };
+		459405AE2B8636DC00727D69 /* mock_message_attachment_template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_message_attachment_template.json; sourceTree = "<group>"; };
 		4702BCEF248FE5C400EE9394 /* ShareInviteCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareInviteCodeViewController.swift; sourceTree = "<group>"; };
 		4702BCF1248FE6B700EE9394 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 		470396E8253721D7007F9C23 /* API+PodcastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+PodcastExtension.swift"; sourceTree = "<group>"; };
@@ -1705,6 +1717,12 @@
 		4734D3942417E3D400D6957E /* com.stakwork.sphinx.desktop */ = {
 			isa = PBXGroup;
 			children = (
+				459405A42B85168100727D69 /* MockData.swift */,
+				459405A62B851A8700727D69 /* mock_contacts.json */,
+				459405A82B851EA500727D69 /* mock_chats.json */,
+				459405AA2B8619E100727D69 /* mock_messages_100_hey_theres.json */,
+				459405AC2B86319200727D69 /* mock_message_template.json */,
+				459405AE2B8636DC00727D69 /* mock_message_attachment_template.json */,
 				47DE1BF72A681D7F0029597B /* Objective-C */,
 				47543C562A9517C5003F8DEE /* Crypter */,
 				4720990C24834DEA00426028 /* Libraries */,
@@ -3453,6 +3471,7 @@
 				4767AE942509BA8C00C82E5B /* GiphySearchView.xib in Resources */,
 				473E1F2E2AC45BBD00DC1CDC /* ThreadRepliesView.xib in Resources */,
 				479496742AB8B52600C42D1E /* InvoicePaymentView.xib in Resources */,
+				459405AB2B8619E100727D69 /* mock_messages_100_hey_theres.json in Resources */,
 				479A03F02587E73A0093DB30 /* TribeMemberInfoView.xib in Resources */,
 				47DE1C052A68813B0029597B /* MessageNoBubbleCollectionViewItem.xib in Resources */,
 				47DE1C392A6AF6DC0029597B /* ShimmeringReceivedMessageView.xib in Resources */,
@@ -3501,6 +3520,7 @@
 				473633E325548E4B007405F2 /* BoostButtonView.xib in Resources */,
 				474274A728EC7289000C3D51 /* TribeTagsView.xib in Resources */,
 				478ED5D325D6FD5300940132 /* NamePinView.xib in Resources */,
+				459405A72B851A8700727D69 /* mock_contacts.json in Resources */,
 				476AAA922A1E5E670092AC87 /* MaterialIconsOutlined.otf in Resources */,
 				47DE1C2E2A69E0C10029597B /* MessageBoostImageView.xib in Resources */,
 				4797E82B24BCC0F200D13270 /* Invite.storyboard in Resources */,
@@ -3552,6 +3572,7 @@
 				47B6F52D258BCF0A00D64A41 /* PodcastLiveHeaderCollectionViewItem.xib in Resources */,
 				47DE1C252A6996480029597B /* NewMessageReplyView.xib in Resources */,
 				4726A43C24C628DA005A66B4 /* bells.caf in Resources */,
+				459405AD2B86319200727D69 /* mock_message_template.json in Resources */,
 				479496212AB2076600C42D1E /* PodcastBoostView.xib in Resources */,
 				4734D39D2417E3D500D6957E /* Assets.xcassets in Resources */,
 				477ADCD62A1E5A85004E74CE /* PinMessageBarView.xib in Resources */,
@@ -3571,8 +3592,10 @@
 				479C793F24ED6A6C009BA1CD /* AuthorizeAppView.xib in Resources */,
 				47DE1C112A6969C50029597B /* NewMessageCollectionViewItem.xib in Resources */,
 				47DE1C0A2A6881FA0029597B /* DateSeparatorView.xib in Resources */,
+				459405A92B851EA500727D69 /* mock_chats.json in Resources */,
 				474E334C248000AA00F7F603 /* AttachmentPriceView.xib in Resources */,
 				479496692AB8A7A000C42D1E /* GroupRequestView.xib in Resources */,
+				459405AF2B8636DC00727D69 /* mock_message_attachment_template.json in Resources */,
 				4797E82424BCC0DA00D13270 /* Groups.storyboard in Resources */,
 				478ED5C525D6FD0F00940132 /* WelcomeView.xib in Resources */,
 			);
@@ -3854,6 +3877,7 @@
 				475B685A29917395000EF29C /* PodcastPlayerController+Delegates&Actions.swift in Sources */,
 				4744FAD7246B2FDE00C5FD94 /* KeychainRestoreViewController.swift in Sources */,
 				474A668B24990188002C2D10 /* MessageOptionView.swift in Sources */,
+				459405A52B85168100727D69 /* MockData.swift in Sources */,
 				4794967C2AB9EF2600C42D1E /* NewChatViewModel+MessageMenuActionsExtension.swift in Sources */,
 				4744FA8E2469C9F800C5FD94 /* UserInvite+CoreDataProperties.swift in Sources */,
 				4703F046248195AE00282186 /* CachingPlayerItem.swift in Sources */,
