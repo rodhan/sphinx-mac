@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftyJSON
 
 class DashboardViewController: NSViewController {
     
@@ -322,8 +323,21 @@ class DashboardViewController: NSViewController {
         
 //        let mockMessages = MockData.MultipleAttachmentMessagesStartingWithID(788251, chatId: 888987, senderId: 9991165, count: 500)
         
-        let mockMessages = MockData.MultipleTextMessagesStartingWithID(788351, chatId: 888987, senderId: 9991165, count: 1000)
+        var mockMessages = [JSON]()
         
+        let messageCount = 500
+        let startingIndex = 788351
+        
+        mockMessages.append(contentsOf: MockData.MultipleAttachmentMessagesStartingWithID(startingIndex, chatId: mockChats[0]["id"].intValue, senderId: mockContacts[0]["id"].intValue, count: messageCount))
+        
+        mockMessages.append(contentsOf: MockData.MultipleAttachmentMessagesStartingWithID(startingIndex + messageCount, chatId: mockChats[0]["id"].intValue, senderId: mockContacts[0]["id"].intValue, count: messageCount))
+        
+        // Add messages to second contact/chat
+        
+        mockMessages.append(contentsOf: MockData.MultipleTextMessagesStartingWithID(startingIndex + (messageCount * 2), chatId: mockChats[1]["id"].intValue, senderId: mockContacts[1]["id"].intValue, count: messageCount))
+        
+        mockMessages.append(contentsOf: MockData.MultipleTextMessagesStartingWithID(startingIndex + (messageCount * 3), chatId: mockChats[1]["id"].intValue, senderId: mockContacts[1]["id"].intValue, count: messageCount))
+                
         print("🐞 Adding mock data. \(mockContacts.count) contacts and \(mockChats.count) chats...")
         chatListViewModel.saveObjects(contacts: mockContacts, chats: mockChats, subscriptions: [], invites: [])
         
