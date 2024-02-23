@@ -433,6 +433,10 @@ extension DashboardViewController : DashboardVCDelegate {
         chatId: Int?,
         contactId: Int?
     ) {
+        if #available(macOS 12.0, *) {
+            TimeTracker.shared.startTimer(withLabel: "didClickOnChatRow")
+        }
+        
         if let contactId = contactId, let contact = UserContact.getContactWith(id: contactId), contact.isPending() {
             if let invite = contact.invite {
                 if invite.isPendingPayment() {

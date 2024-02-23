@@ -72,6 +72,9 @@ extension NewChatViewController: NSFetchedResultsControllerDelegate {
             if let chats = firstSection.objects as? [Chat], let chat = chats.first {
                 self.chat = chat
                 shouldReloadView = true
+                if #available(macOS 12.0, *) {
+                    TimeTracker.shared.stopTimer(withLabel: "didClickOnChatRow")
+                }
             }
         
             if shouldReloadView {

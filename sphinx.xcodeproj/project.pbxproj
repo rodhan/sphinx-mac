@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0DB56AAF2B6285F000B7098E /* ChatTrackingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB56AAE2B6285F000B7098E /* ChatTrackingHandler.swift */; };
 		1AD578FF09B63C227165D4DA /* Pods_Sphinx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C242433501D81263FED4C2 /* Pods_Sphinx.framework */; };
+		459405A32B83AB7400727D69 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459405A22B83AB7400727D69 /* TimeTracker.swift */; };
 		459405A52B85168100727D69 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459405A42B85168100727D69 /* MockData.swift */; };
 		459405A72B851A8700727D69 /* mock_contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405A62B851A8700727D69 /* mock_contacts.json */; };
 		459405A92B851EA500727D69 /* mock_chats.json in Resources */ = {isa = PBXBuildFile; fileRef = 459405A82B851EA500727D69 /* mock_chats.json */; };
@@ -657,6 +658,7 @@
 /* Begin PBXFileReference section */
 		0DB56AAE2B6285F000B7098E /* ChatTrackingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTrackingHandler.swift; sourceTree = "<group>"; };
 		1728D33343FCD0F3C86E770D /* Pods-Sphinx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sphinx.release.xcconfig"; path = "Target Support Files/Pods-Sphinx/Pods-Sphinx.release.xcconfig"; sourceTree = "<group>"; };
+		459405A22B83AB7400727D69 /* TimeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracker.swift; sourceTree = "<group>"; };
 		459405A42B85168100727D69 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		459405A62B851A8700727D69 /* mock_contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_contacts.json; sourceTree = "<group>"; };
 		459405A82B851EA500727D69 /* mock_chats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_chats.json; sourceTree = "<group>"; };
@@ -1717,6 +1719,7 @@
 		4734D3942417E3D400D6957E /* com.stakwork.sphinx.desktop */ = {
 			isa = PBXGroup;
 			children = (
+				459405A22B83AB7400727D69 /* TimeTracker.swift */,
 				459405A42B85168100727D69 /* MockData.swift */,
 				459405A62B851A8700727D69 /* mock_contacts.json */,
 				459405A82B851EA500727D69 /* mock_chats.json */,
@@ -4119,6 +4122,7 @@
 				475B685929917395000EF29C /* PodcastPlayerController+AudioPlayer.swift in Sources */,
 				475B680C29915CCA000EF29C /* ContentBoostAction.swift in Sources */,
 				47FEE20B2A66DB3E00646C4E /* NewChatTableDataSource+CellDelegateExtension.swift in Sources */,
+				459405A32B83AB7400727D69 /* TimeTracker.swift in Sources */,
 				47FEE2132A66DD8400646C4E /* NewChatTableDataSource+BotWebViewExtension.swift in Sources */,
 				478ED57B25D41AFD00940132 /* SignupFieldView.swift in Sources */,
 				47C1D608248EABFB00718B28 /* GroupContactCollectionViewItem.swift in Sources */,
