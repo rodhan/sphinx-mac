@@ -60,7 +60,7 @@ class DashboardViewController: NSViewController {
         DistributedNotificationCenter.default().addObserver(self, selector: #selector(self.themeChangedNotification(notification:)), name: .onInterfaceThemeChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleImageNotification(_:)), name: .webViewImageClicked, object: nil)
         
-//        loadMockData()
+        loadMockData()
     }
     
     override func viewWillAppear() {
