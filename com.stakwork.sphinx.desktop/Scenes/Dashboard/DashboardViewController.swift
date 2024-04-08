@@ -325,18 +325,28 @@ class DashboardViewController: NSViewController {
         
         var mockMessages = [JSON]()
         
-        let messageCount = 500
-        let startingIndex = 788351
+        let messageCount = 1000
+        let startingIndex = 789351
         
+        // Add messages to first contact/chat
+        // 1000 Attachment Messages
+                
         mockMessages.append(contentsOf: MockData.MultipleAttachmentMessagesStartingWithID(startingIndex, chatId: mockChats[0]["id"].intValue, senderId: mockContacts[0]["id"].intValue, count: messageCount))
         
-        mockMessages.append(contentsOf: MockData.MultipleAttachmentMessagesStartingWithID(startingIndex + messageCount, chatId: mockChats[0]["id"].intValue, senderId: mockContacts[0]["id"].intValue, count: messageCount))
-        
         // Add messages to second contact/chat
+        // 1000 Text Messages
         
-        mockMessages.append(contentsOf: MockData.MultipleTextMessagesStartingWithID(startingIndex + (messageCount * 2), chatId: mockChats[1]["id"].intValue, senderId: mockContacts[1]["id"].intValue, count: messageCount))
+        mockMessages.append(contentsOf: MockData.MultipleTextMessagesStartingWithID(startingIndex + messageCount, chatId: mockChats[1]["id"].intValue, senderId: mockContacts[1]["id"].intValue, count: messageCount))
         
-        mockMessages.append(contentsOf: MockData.MultipleTextMessagesStartingWithID(startingIndex + (messageCount * 3), chatId: mockChats[1]["id"].intValue, senderId: mockContacts[1]["id"].intValue, count: messageCount))
+        
+        // Add messages to third contact/chat
+        // 1 Text Message
+        
+        mockMessages.append(contentsOf: MockData.MultipleTextMessagesStartingWithID(startingIndex + messageCount + messageCount, chatId: mockChats[2]["id"].intValue, senderId: mockContacts[2]["id"].intValue, count: 1))
+        
+        
+        // No need to add messages to forth contact/chat
+        // Zero messages
                 
         print("🐞 Adding mock data. \(mockContacts.count) contacts and \(mockChats.count) chats...")
         chatListViewModel.saveObjects(contacts: mockContacts, chats: mockChats, subscriptions: [], invites: [])
